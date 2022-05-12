@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- By default, we are not in debug mode -->
+  <arg name="debug" default="false" />
+
+  <!-- GDB Debug Option -->
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+
+
+  <node name="thormang3_move_group_demo" pkg="thormang3_move_group" type="thormang3_move_group_demo" respawn="false" launch-prefix="$(arg launch_prefix)" output="screen">
+  </node>
+
+</launch>
